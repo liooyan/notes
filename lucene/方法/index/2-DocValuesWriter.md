@@ -48,5 +48,77 @@
   }
 ```
 
-我们看到
+我们看到添加值时，就是在`pending ` 和  `docsWithField ` 分别添加数据。
+
+
+
+
+
+## 3.2 flush
+
+```java
+  @Override
+  public void flush(SegmentWriteState state, Sorter.DocMap sortMap, DocValuesConsumer dvConsumer) throws IOException {
+    if (finalValues == null) {
+      finalValues = pending.build();
+    }
+    final NumericDVs sorted;
+    if (sortMap != null) {
+      NumericDocValues oldValues = new BufferedNumericDocValues(finalValues, docsWithField.iterator());
+      sorted = sortDocValues(state.segmentInfo.maxDoc(), sortMap, oldValues);
+    } else {
+      sorted = null;
+    }
+
+    dvConsumer.addNumericField(fieldInfo,
+                               new EmptyDocValuesProducer() {
+                                 @Override
+                                 public NumericDocValues getNumeric(FieldInfo fieldInfo) {
+                                   if (fieldInfo != NumericDocValuesWriter.this.fieldInfo) {
+                                     throw new IllegalArgumentException("wrong fieldInfo");
+                                   }
+                                   if (sorted == null) {
+                                     return new BufferedNumericDocValues(finalValues, docsWithField.iterator());
+                                   } else {
+                                     return new SortingNumericDocValues(sorted);
+                                   }
+                                 }
+                               });
+  }
+```
+
+
+
+这里我们看到创建了 `EmptyDocValuesProducer` 用于数据遍历，而具体的写过程交给了`DocValuesConsumer dvConsumer`
+
+## 3.3 BufferedNumericDocValues
+
+通过 遍历 `pending ` 和  `docsWithField ` 对象，获取 文档id和具体的值
+
+
+
+```java
+    @Override
+    public int docID() {
+      return docsWithField.docID();
+    }
+
+    @Override
+    public int nextDoc() throws IOException {
+      int docID = docsWithField.nextDoc();
+      if (docID != NO_MORE_DOCS) {
+        value = iter.next();
+      }
+      return docID;
+    }
+
+    @Override
+    public long longValue() {
+      return value;
+    }
+```
+
+这里主要关注3个方法， nextDoc。 获取下一个 文档和value 并返回 文档id。之后我们就可以通过 docID() 和 longValue()  获取我们想要的数据。
+
+
 
