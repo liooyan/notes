@@ -29,7 +29,7 @@
 - blocks 存储数据的二维数组
 - currentBlock 当前正在使用的数组
 - blockSize 一个数组的大小
-- 
+- upto 当前数组已经使用的大小
 
 
 
@@ -37,5 +37,13 @@
 
 ## 2.2 addBlock
 
-内部调用，当
+内部调用，当currentBlock  qua
+
+```java
+
+  private void addBlock(byte[] block) {
+    blocks = ArrayUtil.grow(blocks, numBlocks + 1);
+    blocks[numBlocks++] = block;
+  }
+```
 
