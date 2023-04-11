@@ -19,3 +19,34 @@
 
 
 # 3 NumericDocValuesWriter
+
+用于存储 数值类型的索引，主要用于缓存的成员变量有：
+
+- pending = PackedLongValues.*deltaPackedBuilder*(PackedInts.*COMPACT*);-
+- docsWithField = new DocsWithFieldSet();
+
+分别为 `DocsWithFieldSet` 和 `PackedLongValues` 对象
+
+
+
+## 3.1 addValue
+
+为字段添加索引，
+
+```java
+  public void addValue(int docID, long value) {
+    if (docID <= lastDocID) {
+      throw new IllegalArgumentException("DocValuesField \"" + fieldInfo.name + "\" appears more than once in this document (only one value is allowed per field)");
+    }
+
+    pending.add(value);
+    docsWithField.add(docID);
+
+    updateBytesUsed();
+
+    lastDocID = docID;
+  }
+```
+
+我们看到
+
