@@ -30,7 +30,7 @@
 - currentBlock 当前正在使用的数组
 - blockSize 一个数组的大小
 - upto 当前数组已经使用的大小
-- numBlocks 已经归档的
+- numBlocks blocks已经使用的大小
 
 
 
@@ -48,3 +48,6 @@
   }
 ```
 
+
+
+## 2.3
