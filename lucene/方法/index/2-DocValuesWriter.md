@@ -124,5 +124,7 @@
 
 # 4 BinaryDocValuesWriter
 
+## 4.1 数据存储
 
+与NumericDocValuesWriter 类似， 文档id通过
 
