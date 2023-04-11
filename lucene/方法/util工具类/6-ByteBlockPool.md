@@ -8,7 +8,9 @@
 
 
 
-ByteBlockPool将数组分为一个一个slice数据片,假如有数据存入时会分配一个slice，如下
+ByteBlockPool将数组分为一个一个slice数据片,假如有数据存入时会分配一个slice，如下图1。
+
+当有新
 
 
 
