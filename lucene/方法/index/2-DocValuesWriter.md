@@ -134,5 +134,22 @@
 
 ## 4.2 BufferedBinaryDocValues
 
+与NumericDocValuesWriter 区别在于获取数据
+
+```java
+    @Override
+    public int nextDoc() throws IOException {
+      int docID = docsWithField.nextDoc();
+      if (docID != NO_MORE_DOCS) {
+        int length = Math.toIntExact(lengthsIterator.next());
+        value.setLength(length);
+        bytesIterator.readBytes(value.bytes(), 0, length);
+      }
+      return docID;
+    }
+```
+
+通过`PackedLongValues` ji'l
+
 
 
