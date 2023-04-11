@@ -8,7 +8,7 @@
 
 
 
-ByteBlockPool将数组fen'weislice数据片
+ByteBlockPool将数组分为一个一个slice数据片,假如有数据存入时会分配一个slice，如下
 
 
 
