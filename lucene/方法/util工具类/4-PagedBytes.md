@@ -50,4 +50,9 @@
 
 
 
-## 2.3
+# 3 内部类
+
+
+
+- PagedBytesDataInput 读取数据
+- PagedBytesDataOutput 写入数据
