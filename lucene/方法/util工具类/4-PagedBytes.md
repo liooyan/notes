@@ -28,7 +28,8 @@
 
 - blocks 存储数据的二维数组
 - currentBlock 当前正在使用的数组
-- blockSize 一个数组存储
+- blockSize 一个数组的大小
+- 
 
 
 
