@@ -1,5 +1,5 @@
 c:                                 
-cd 'c:\Users\Administrator\Desktop\OneDrive - liyan\notes\'                
+cd 'C:\Users\Administrator\Desktop\OneDrive - liyan\notes\.git\'                
 
 git add .                           
 git commit -m "up"       
