@@ -24,7 +24,13 @@
   }
 ```
 
-通过 
+通过 参数 blockBits 确定 byte 每个元素的长度。主要cheng'yu
 
 
+
+
+
+## 2.2 addBlock
+
+内部调用，当
 
