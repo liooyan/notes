@@ -126,5 +126,5 @@
 
 ## 4.1 数据存储
 
-与NumericDocValuesWriter 类似， 文档id通过
+与NumericDocValuesWriter 类似， 文档id通过 `DocsWithFieldSet` 存储。但内容通过 `PagedBytes`进行存储，同时通过
 
