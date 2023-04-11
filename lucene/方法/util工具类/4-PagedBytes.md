@@ -30,6 +30,7 @@
 - currentBlock 当前正在使用的数组
 - blockSize 一个数组的大小
 - upto 当前数组已经使用的大小
+- numBlocks 已经归档的
 
 
 
@@ -37,7 +38,7 @@
 
 ## 2.2 addBlock
 
-内部调用，当currentBlock  qua
+内部调用，将 block 数组，归档到 blocks 中
 
 ```java
 
