@@ -24,7 +24,11 @@
   }
 ```
 
-通过 参数 blockBits 确定 byte 每个元素的长度。主要cheng'yu
+通过 参数 blockBits 确定 byte 每个元素的长度。主要成员变量
+
+- blocks 存储数据的二维数组
+- currentBlock 当前正在使用的数组
+- blockSize 一个数组存储
 
 
 
