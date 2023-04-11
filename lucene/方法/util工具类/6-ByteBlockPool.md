@@ -4,9 +4,11 @@
 
 首先它`PagedBytes` 类似，通过使用二维数组，存储数据。
 
-在 `PagedBytes` 基础上，扩展一个类似
+在 `PagedBytes` 基础上，扩展一个类似链表的结构。用于存储多组的byte数据。
 
 
+
+ByteBlockPool将数组fen'weislice数据片
 
 
 
