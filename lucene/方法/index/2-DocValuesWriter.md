@@ -149,7 +149,15 @@
     }
 ```
 
-通过`PackedLongValues` ji'l
+通过`PackedLongValues` 记录的数组长度，在`PagedBytes` 获取每个 bytes.
+
+
+
+# 5 SortedDocValuesWriter
+
+
+
+
 
 
 
