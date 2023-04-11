@@ -1,3 +1,4 @@
+@echo off
 c:                                 
 cd "C:\Users\Administrator\Desktop\OneDrive - liyan\notes"
 
