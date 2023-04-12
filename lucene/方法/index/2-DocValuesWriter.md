@@ -242,3 +242,27 @@
   }
 ```
 
+将当前结果保存至3个成员变量中
+
+
+
+
+
+## 6.4 BufferedSortedNumericDocValues 
+
+```java
+    @Override
+    public int nextDoc() throws IOException {
+      for (int i = valueUpto; i < valueCount; ++i) {
+        valuesIter.next();
+      }
+
+      int docID = docsWithField.nextDoc();
+      if (docID != NO_MORE_DOCS) {
+        valueCount = Math.toIntExact(valueCountsIter.next());
+        valueUpto = 0;
+      }
+      return docID;
+    }
+```
+
