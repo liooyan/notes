@@ -81,5 +81,7 @@ FieldValues   结构根据不同的数据类型，保存为不同的结构。其
 
 
 
-### 2.3.1
+### 2.3.1  NumericDocValuesWriter
+
+NumericDocValuesWriter  存储的是 
 
