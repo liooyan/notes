@@ -92,3 +92,39 @@ nextBuffer 如果buffer 空间不足，分配新的buffer 。参考 `PagedBytes`
 
 ## 3.3 allocSlice
 
+```java
+  public int allocSlice(final byte[] slice, final int upto) {
+	//计算新的空间分配多少内容
+    final int level = slice[upto] & 15;
+    final int newLevel = NEXT_LEVEL_ARRAY[level];
+    final int newSize = LEVEL_SIZE_ARRAY[newLevel];
+
+    // buffer 不足，进行扩展
+    if (byteUpto > BYTE_BLOCK_SIZE-newSize) {
+      nextBuffer();
+    }
+
+    final int newUpto = byteUpto;
+    final int offset = newUpto + byteOffset;
+    byteUpto += newSize;
+
+   
+    // jing
+    buffer[newUpto] = slice[upto-3];
+    buffer[newUpto+1] = slice[upto-2];
+    buffer[newUpto+2] = slice[upto-1];
+
+    // Write forwarding address at end of last slice:
+    slice[upto-3] = (byte) (offset >>> 24);
+    slice[upto-2] = (byte) (offset >>> 16);
+    slice[upto-1] = (byte) (offset >>> 8);
+    slice[upto] = (byte) offset;
+        
+    // Write new level:
+    buffer[byteUpto-1] = (byte) (16|newLevel);
+
+    return newUpto+3;
+  }
+
+```
+
