@@ -8,7 +8,7 @@
 
 
 
-# 2 示例
+# 2 示例与原理
 
 ```java
     public static void main(String[] args)
@@ -60,4 +60,5 @@
 
 
 
-# 2 主要方法
+# 3 主要方法
+
