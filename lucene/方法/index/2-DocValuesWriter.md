@@ -218,4 +218,27 @@
   }
 ```
 
-使用 currentValues 数值
+使用 currentValues 数组零时保存当前文档的值
+
+
+
+## 6.3 finishCurrentDoc
+
+```java
+  private void finishCurrentDoc() {
+    if (currentDoc == -1) {
+      return;
+    }
+     //排序
+    Arrays.sort(currentValues, 0, currentUpto);
+    for (int i = 0; i < currentUpto; i++) {
+      pending.add(currentValues[i]);
+    }
+    // record the number of values for this doc
+    pendingCounts.add(currentUpto);
+    currentUpto = 0;
+
+    docsWithField.add(currentDoc);
+  }
+```
+
