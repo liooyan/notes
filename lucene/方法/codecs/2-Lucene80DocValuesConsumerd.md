@@ -57,7 +57,10 @@ dvm是对dvd文件的索引，每个字段都是如下4个结构。
 
 
 
-- offset dvd 
+- offset ：dvd 文件中 DocsIDFileId   结构开始的位置
+- docIdPointer ： DocsIDFileId    结构所占的空间
+- jumpCount ： DocsIDFileId   被分为几个block
+- 
 
 
 
