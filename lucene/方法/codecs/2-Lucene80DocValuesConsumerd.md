@@ -103,3 +103,7 @@ NumericDocValuesWriter  存储的是 处理后的数组
 
 - 记录字段的id
 - 记录字段的值
+
+
+
+### 2.3.4 SortedNumericDocValuesWriter
