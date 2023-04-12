@@ -67,4 +67,21 @@
 - buffers 二维数组，存储内容。
 - buffer 当前正在使用的数组。
 - *LEVEL_SIZE_ARRAY* = {5, 14, 20, 30, 40, 40, 80, 80, 120, 200} 新的分配分配的空间大小
-- NEXT_LEVEL_ARRAY 
+- NEXT_LEVEL_ARRAY 每次分配新空间时使用的LEVEL_SIZE_ARRAY 数组下标
+
+
+
+## 3.2 newSlice
+
+```java
+  public int newSlice(final int size) {
+    if (byteUpto > BYTE_BLOCK_SIZE-size)
+      nextBuffer();
+    final int upto = byteUpto;
+    byteUpto += size;
+    buffer[byteUpto-1] = 16;
+    return upto;
+  }
+```
+
+nextBuffer 如果空间不足，分配新的
