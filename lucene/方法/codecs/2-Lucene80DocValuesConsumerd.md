@@ -97,4 +97,9 @@ NumericDocValuesWriter  存储的是 处理后的数组
 
 
 
-### 2.3.3
+### 2.3.3 SortedDocValuesWriter
+
+分为2个数组
+
+- 记录字段的id
+- 记录字段的值
