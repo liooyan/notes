@@ -19,7 +19,11 @@ dvd与dvm 文件存储的是列式的索引信息。
 
 
 
-## 2.1 
+## 2.1 DocsIDFileId  
+
+DocsIDFileId   存储的是哪些文档有当前zi'd
+
+
 
 
 
