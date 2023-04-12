@@ -20,9 +20,10 @@
         byte[] buffer = byteBlockPool.buffer;
         for (int i = index;index < 100000 ; i++)
         {
-            //如果当前byte不为0 shuo'm
+            //如果当前byte不为0 说明分配的空间已经用完，需要再分配新的空间
             if (buffer[i] != 0)
             {
+                //分配新的空间，并返回，新空间的开始下标
                 index = byteBlockPool.allocSlice(buffer, i);
                 buffer = byteBlockPool.buffer;
                 i = index-1;
@@ -32,6 +33,10 @@
         }
     }
 ```
+
+上图示示例li
+
+
 
 
 
