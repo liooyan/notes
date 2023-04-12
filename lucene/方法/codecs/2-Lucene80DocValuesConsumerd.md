@@ -14,9 +14,21 @@
 
 
 
+- DOcsIDFileId  记录有当前字段的文档id
+- FielDValues  字段的值，FielDValues   结构如下
+
 ![dvd-docId.drawio](dvd-docId.drawio.svg)
+
+
+
+
 
 
 
 ## 2.2 dvm
 
+
+
+
+
+# 3 
