@@ -181,7 +181,24 @@
 
 
 
-## 6.2 主要方法
+## 6.2 addValue
+
+添加文档值
+
+```java
+
+  public void addValue(int docID, long value) {
+    assert docID >= currentDoc;
+      //与上一个添加的文档id不同，说明当前文档保存完成
+    if (docID != currentDoc) {
+      finishCurrentDoc();
+      currentDoc = docID;
+    }
+
+    addOneValue(value);
+    updateBytesUsed();
+  }
+```
 
 
 
