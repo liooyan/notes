@@ -41,7 +41,7 @@ DocsIDFileId   存储的是哪些文档有当前字段，记录的是文档id值
 
 
 
-
+![dvd-docId](dvd-docId.svg)
 
 
 
@@ -49,9 +49,9 @@ DocsIDFileId   存储的是哪些文档有当前字段，记录的是文档id值
 
 
 
+![dvd-number-value](dvd-number-value.svg)
 
 
-![dvd-docId.drawio](dvd-docId.drawio.svg)
 
 
 
