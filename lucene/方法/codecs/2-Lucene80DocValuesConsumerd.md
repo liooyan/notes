@@ -49,15 +49,11 @@ DocsIDFileId   存储的是哪些文档有当前字段，记录的是文档id值
 
 ## 2.2 dvm
 
+dvm是dui
 
 
 
-
-
-
-
-
-
+![dvm](dvm.svg)
 
 
 
