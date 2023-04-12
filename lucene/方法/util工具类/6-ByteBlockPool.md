@@ -120,7 +120,7 @@ nextBuffer 如果buffer 空间不足，分配新的buffer 。参考 `PagedBytes`
     slice[upto-1] = (byte) (offset >>> 8);
     slice[upto] = (byte) offset;
         
-    // 在x写新空间
+    // 在新空间的结尾写标志位
     buffer[byteUpto-1] = (byte) (16|newLevel);
 
     return newUpto+3;
