@@ -289,3 +289,4 @@
 
 # 7 SortedSetDocValuesWriter
 
+与 SortedDocValuesWriter 类似，结合SortedNumericDocValuesWriter 的存储多值逻辑
