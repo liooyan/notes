@@ -12,7 +12,7 @@
 -  BINARY 保存字节数组，值可以大于32766字节  org.apache.lucene.index.BinaryDocValuesWriter
 -  SORTED 保存字节数组，结果将按照字节码排序，值必须小于等于32766字节 org.apache.lucene.index.SortedDocValuesWriter
 -  SORTED_NUMERIC 多个值的数值类型，  org.apache.lucene.index.SortedNumericDocValuesWriter
--  SORTED_SET  多个值的去重的字节数组，值必须小于等于32766字节  org.apache.lucene.index.SortedSetDocValuesWriter
+-  SORTED_SET  多个值的字节数组，值必须小于等于32766字节  org.apache.lucene.index.SortedSetDocValuesWriter
 
 
 
@@ -287,4 +287,5 @@
 
 
 
-## 
+# 7 SortedSetDocValuesWriter
+
