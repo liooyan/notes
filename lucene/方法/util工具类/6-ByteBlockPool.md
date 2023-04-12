@@ -15,11 +15,12 @@
     {
 
         ByteBlockPool byteBlockPool = new ByteBlockPool(new DirectAllocator());
-        //分配一个空间为10的
+        //分配一个空间为10的分配
         int index = byteBlockPool.newSlice(10);
         byte[] buffer = byteBlockPool.buffer;
         for (int i = index;index < 100000 ; i++)
         {
+            //如果当前byte不为0 shuo'm
             if (buffer[i] != 0)
             {
                 index = byteBlockPool.allocSlice(buffer, i);
