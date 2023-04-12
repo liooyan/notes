@@ -250,6 +250,8 @@
 
 ## 6.4 BufferedSortedNumericDocValues 
 
+迭代器，获取下一个文档id
+
 ```java
     @Override
     public int nextDoc() throws IOException {
@@ -266,3 +268,23 @@
     }
 ```
 
+
+
+获取下一个值
+
+```java
+   @Override
+    public long nextValue() {
+      if (valueUpto == valueCount) {
+        throw new IllegalStateException();
+      }
+      valueUpto++;
+      return valuesIter.next();
+    }
+```
+
+
+
+
+
+## 
