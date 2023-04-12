@@ -91,5 +91,10 @@ NumericDocValuesWriter  存储的是 处理后的数组
 
 
 
-## 2.3.2 
+### 2.3.2 BinaryDocValuesWriter
 
+记录结果
+
+
+
+### 2.3.3
