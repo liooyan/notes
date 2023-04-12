@@ -16,7 +16,7 @@
 
         ByteBlockPool byteBlockPool = new ByteBlockPool(new DirectAllocator());
         //分配一个空间为10的分配
-        int index = byteBlockPool.newSlice(10);
+        int index = byteBlockPool.newSlice(5);
         byte[] buffer = byteBlockPool.buffer;
         for (int i = index;index < 100000 ; i++)
         {
@@ -34,7 +34,9 @@
     }
 ```
 
-上述dai'm
+上述代码流程为，通过newSlice 分配一个空间为5的slice。 
+
+当
 
 
 
