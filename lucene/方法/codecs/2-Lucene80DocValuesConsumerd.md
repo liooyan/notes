@@ -45,11 +45,13 @@ DocsIDFileId   存储的是哪些文档有当前字段，记录的是文档id值
 
 
 
-## 2.1 dvm
+
+
+## 2.2 dvm
 
 
 
-![dvd-number-value](dvd-number-value.svg)
+
 
 
 
