@@ -109,18 +109,18 @@ nextBuffer 如果buffer 空间不足，分配新的buffer 。参考 `PagedBytes`
     byteUpto += newSize;
 
    
-    // jing
+    // 将旧空间的最后3位赋值到新空间开始
     buffer[newUpto] = slice[upto-3];
     buffer[newUpto+1] = slice[upto-2];
     buffer[newUpto+2] = slice[upto-1];
 
-    // Write forwarding address at end of last slice:
+    //进旧空间的最后4位赋值为新空间的开始下标
     slice[upto-3] = (byte) (offset >>> 24);
     slice[upto-2] = (byte) (offset >>> 16);
     slice[upto-1] = (byte) (offset >>> 8);
     slice[upto] = (byte) offset;
         
-    // Write new level:
+    // 在x写新空间
     buffer[byteUpto-1] = (byte) (16|newLevel);
 
     return newUpto+3;
