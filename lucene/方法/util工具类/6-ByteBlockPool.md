@@ -29,7 +29,7 @@
                 i = index-1;
                 continue;
             }
-            buffer[i] = 0x11;
+            buffer[i] = 17;
         }
     }
 ```
