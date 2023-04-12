@@ -15,7 +15,7 @@ dvd与dvm 文件存储的是列式的索引信息。
 每个字段就是一个docsIDField 和FielValues的组合，当前段有几个字段就有几种这样的组合。
 
 - DocsIDFileId  记录有当前字段的文档id
-- FielDValues  字段的值，FielDValues   结构如下
+- FieldValues  字段的值，FielDValues   结构如下
 
 
 
@@ -68,9 +68,9 @@ dvm是对dvd文件的索引，每个字段都是如下4个结构。
 
 
 
-## 2.3 dvm
+## 2.3 FieldValues  
 
-
+FieldValues   结构根据不同的数据类型，保存为不同的结构。其yu
 
 
 
