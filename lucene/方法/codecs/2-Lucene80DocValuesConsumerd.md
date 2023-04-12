@@ -6,7 +6,7 @@
 
 # 2  文件格式
 
-dvd与dvm 文件存储的是列式的s
+dvd与dvm 文件存储的是列式的索引信息，在dvd文件中，按照不同zi'd
 
 ## 2.1 dvd
 
@@ -14,7 +14,7 @@ dvd与dvm 文件存储的是列式的s
 
 
 
-- DOcsIDFileId  记录有当前字段的文档id
+- DocsIDFileId  记录有当前字段的文档id
 - FielDValues  字段的值，FielDValues   结构如下
 
 ![dvd-docId.drawio](dvd-docId.drawio.svg)
