@@ -8,9 +8,33 @@
 
 
 
-2
+# 2 示例
 
-ByteBlockPool将数组分为一个一个slice数据片,假如有数据存入时会分配一个slice，如下图1。
+```java
+    public static void main(String[] args)
+    {
+
+        ByteBlockPool byteBlockPool = new ByteBlockPool(new DirectAllocator());
+        //分配一个空间为10的
+        int index = byteBlockPool.newSlice(10);
+        byte[] buffer = byteBlockPool.buffer;
+        for (int i = index;index < 100000 ; i++)
+        {
+            if (buffer[i] != 0)
+            {
+                index = byteBlockPool.allocSlice(buffer, i);
+                buffer = byteBlockPool.buffer;
+                i = index-1;
+                continue;
+            }
+            buffer[i] = 0x11;
+        }
+    }
+```
+
+
+
+BlockPool将数组分为一个一个slice数据片,假如有数据存入时会分配一个slice，如下图1。
 
 当有新的一组数据添加时，会分配一个新的slice 用于存储新分组的数据，如下图2.
 
