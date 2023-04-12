@@ -84,4 +84,11 @@
   }
 ```
 
-nextBuffer 如果空间不足，分配新的
+nextBuffer 如果buffer 空间不足，分配新的buffer 。参考 `PagedBytes`逻辑
+
+最后通过将新空间的最后一位`buffer[byteUpto-1] = 16` 赋值为16
+
+
+
+## 3.3 allocSlice
+
