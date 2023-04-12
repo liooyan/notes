@@ -161,5 +161,11 @@
 
 ## 5.1 原理
 
-对于BytesRef  使用`BytesRefHash ` 进行存储。 最后使用 `SortedDocValuesTermsEnum` hu
+对于BytesRef  使用`BytesRefHash ` 进行存储。 最后使用 `SortedDocValuesTermsEnum` 获取排序后的结果
+
+
+
+
+
+# 6 
 
