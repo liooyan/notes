@@ -173,7 +173,8 @@
 
 
 
-## 6.1 原理
+## 6.1 主要成员变量
 
-使用3个值保存
+- ackedLongValues.Builder pending 存储所有的值
+- PackedLongValues.Builder pendingCounts 存储没个id
 
