@@ -167,5 +167,13 @@
 
 
 
-# 6 
+# 6 SortedNumericDocValuesWriter
+
+存储多值的 数值类型
+
+
+
+## 6.1 原理
+
+使用3个值保存
 
