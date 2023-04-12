@@ -191,10 +191,11 @@
     assert docID >= currentDoc;
       //与上一个添加的文档id不同，说明当前文档保存完成
     if (docID != currentDoc) {
+       //完成当前文档
       finishCurrentDoc();
       currentDoc = docID;
     }
-
+	//给当前文档添加一个值
     addOneValue(value);
     updateBytesUsed();
   }
@@ -202,3 +203,19 @@
 
 
 
+## 6.3 addOneValue
+
+
+
+```java
+  private void addOneValue(long value) {
+    if (currentUpto == currentValues.length) {
+      currentValues = ArrayUtil.grow(currentValues, currentValues.length+1);
+    }
+    
+    currentValues[currentUpto] = value;
+    currentUpto++;
+  }
+```
+
+使用 currentValues 数值
