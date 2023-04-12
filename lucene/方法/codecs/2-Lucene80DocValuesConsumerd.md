@@ -49,11 +49,15 @@ DocsIDFileId   存储的是哪些文档有当前字段，记录的是文档id值
 
 ## 2.2 dvm
 
-dvm是dui
+dvm是对dvd文件的索引，每个字段都是如下4个结构。
 
 
 
 ![dvm](dvm.svg)
+
+
+
+- offset dvd 
 
 
 
