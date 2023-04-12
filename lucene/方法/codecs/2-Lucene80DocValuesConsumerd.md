@@ -108,4 +108,14 @@ NumericDocValuesWriter  存储的是 处理后的数组
 
 ### 2.3.4 SortedNumericDocValuesWriter
 
-在 NumericDocValuesWriter 基础上添加一个记录 每个字段数量的
+在 NumericDocValuesWriter 基础上添加一个记录 每个字段数量的数组
+
+
+
+
+
+### 2.3.5 SortedSetDocValuesWriter
+
+
+
+与 SortedNumericDocValuesWriter 类似
