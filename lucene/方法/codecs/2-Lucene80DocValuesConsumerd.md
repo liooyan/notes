@@ -47,9 +47,9 @@ DocsIDFileId   存储的是哪些文档有当前字段，记录的是文档id值
 
 
 
-## 2.2 dvm
+## 2.2 dvm，
 
-dvm是对dvd文件的索引，每个字段都是如下4个结构。
+dvm是对dvd文件的索引，每个字段都是如下结构。
 
 
 
@@ -60,7 +60,8 @@ dvm是对dvd文件的索引，每个字段都是如下4个结构。
 - offset ：dvd 文件中 DocsIDFileId   结构开始的位置。特殊情况：-2 表示当前字段全为空，-1 表示当前字段全有值
 - docIdPointer ： DocsIDFileId    结构所占的空间
 - jumpCount ： DocsIDFileId   被分为几个block
-- demseRankPower：DocsIDFileId    压缩时用。
+- demseRankPower：DocsIDFileId    压缩时用
+- numValues ：
 
 
 
