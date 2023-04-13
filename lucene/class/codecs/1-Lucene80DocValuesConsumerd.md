@@ -76,32 +76,3 @@ dvm是对dvd文件的索引，每个字段都是如下结构。
 ## 3 FieldValues  
 
 FieldValues   结构根据不同的数据类型，保存为不同的结构。其与 `DocValuesWriter`中不同子类一一对应。参考各自子文档
-
-
-
-
-
-
-
-### 2.3.3 SortedDocValuesWriter
-
-分为2个数组
-
-- 记录字段的id
-- 记录字段的值
-
-
-
-### 2.3.4 SortedNumericDocValuesWriter
-
-在 NumericDocValuesWriter 基础上添加一个记录 每个字段数量的数组
-
-
-
-
-
-### 2.3.5 SortedSetDocValuesWriter
-
-
-
-与 SortedNumericDocValuesWriter 类似
