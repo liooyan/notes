@@ -198,7 +198,7 @@ ORTED_NUMERIC文档为存储多个数值属性索引，所以它有NUMERIC 格�
 
 
 
-SORTED_SET格式
+# 8 SORTED_SET格式
 
 本文档在 Lucene80DocValuesConsumer 的文档基础上，描述关于SORTED_SET字段类型的`FieldValues`  编码。
 
