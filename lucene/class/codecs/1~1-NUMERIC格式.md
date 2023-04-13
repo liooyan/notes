@@ -14,7 +14,7 @@
 
 
 
-以上就是对于NUMERIC 格式 的FieldValues。其数据最后为压缩后的数值。我们主要关注点在
+以上就是对于NUMERIC 格式 的FieldValues。其数据最后为压缩后的数值。我们主要关注点在dvm上，观察dvm。记录哪些信息，方便我们解析FieldValues
 
 
 
@@ -26,3 +26,4 @@
 
 dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的索引，具体如下：
 
+![dvm-number](dvm-number.svg)
