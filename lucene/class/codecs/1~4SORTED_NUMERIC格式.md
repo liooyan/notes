@@ -17,3 +17,9 @@ ORTED_NUMERIC文档为存储多个数值属性索引，所以它有NUMERIC 格�
 
 
 # 3 dvm- FieldValues  部分
+
+在NUMERIC  格式基础上添加关于address数组的描述
+
+- start ：address开始位置
+- BLOCK_SHIFT
+- 
