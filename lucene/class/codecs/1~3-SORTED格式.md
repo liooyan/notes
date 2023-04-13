@@ -4,7 +4,10 @@
 
 # 2 FieldValues
 
-SORTED 为短语格式的索引，ord
+SORTED 为短语格式的索引，它共分为3个数组进行存储
+
+- ord 数组：数量与文档id相同，用于存储每个文档对于的values编号
+- values数组：用于存储
 
 
 
