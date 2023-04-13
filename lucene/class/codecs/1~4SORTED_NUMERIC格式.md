@@ -10,7 +10,7 @@
 
 ORTED_NUMERIC文档为存储多个数值属性索引，所以它有NUMERIC 格式的所有内容，同时在NUMERIC 格式基础上添加关于每个文档对应的数量。
 
-
+添加一个addresses 数组，
 
 
 
@@ -20,6 +20,6 @@ ORTED_NUMERIC文档为存储多个数值属性索引，所以它有NUMERIC 格�
 
 在NUMERIC  格式基础上添加关于address数组的描述
 
-- start ：address开始位置
+- start ：address数组开始位置
 - BLOCK_SHIFT
-- 
+- pointer： address数组占用大小
