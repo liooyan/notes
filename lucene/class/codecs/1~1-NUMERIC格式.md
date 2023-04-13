@@ -27,3 +27,7 @@
 dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的索引，具体如下：
 
 ![dvm-number](dvm-number.svg)
+
+
+
+- blockCount ： FieldValues 分块数量，
