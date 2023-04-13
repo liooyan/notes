@@ -30,4 +30,5 @@ dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的
 
 
 
-- blockCount ： FieldValues 分块数量，
+- blockCount ： FieldValues 分块数量，如果不分块。则为-1
+- 
