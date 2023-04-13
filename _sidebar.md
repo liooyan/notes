@@ -3,8 +3,8 @@
   * **方法**
     * **codecs**
       * [1-DocValuesProducer](lucene/方法/codecs/1-DocValuesProducer.md)
-      * [2-1NumericDocValues格式](lucene/方法/codecs/2-1NumericDocValues格式.md)
       * [2-Lucene80DocValuesConsumerd](lucene/方法/codecs/2-Lucene80DocValuesConsumerd.md)
+      * [2~1-NumericDocValues格式](lucene/方法/codecs/2~1-NumericDocValues格式.md)
       * [3-Lucene80DocValuesProducer](lucene/方法/codecs/3-Lucene80DocValuesProducer.md)
     * **index**
       * [1-DocIdSet](lucene/方法/index/1-DocIdSet.md)
