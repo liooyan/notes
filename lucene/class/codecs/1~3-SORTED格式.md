@@ -19,4 +19,8 @@
 
 
 - numberOfBitsPerOrd ： 一个ord占用的bit位
-- ordStartOffset： 
+- ordStartOffset： ord数组在dvd文件开始位置
+- ordPointer： ord数组占用dvd大小
+- code： 压缩格式
+- blockShift： 分片方式
+- maxLength：values中zhan
