@@ -6,8 +6,8 @@
       * [1~1-NUMERIC格式](lucene/class/codecs/1~1-NUMERIC格式.md)
       * [1~2-BINARY格式](lucene/class/codecs/1~2-BINARY格式.md)
       * [1~3-SORTED格式](lucene/class/codecs/1~3-SORTED格式.md)
+      * [1~4SORTED_NUMERIC格式](lucene/class/codecs/1~4SORTED_NUMERIC格式.md)
       * [2-Lucene80DocValuesProducer](lucene/class/codecs/2-Lucene80DocValuesProducer.md)
-      * [Untitled](lucene/class/codecs/Untitled.md)
     * **index**
       * [1-DocIdSet](lucene/class/index/1-DocIdSet.md)
       * [2-DocValuesWriter](lucene/class/index/2-DocValuesWriter.md)
