@@ -4,7 +4,7 @@
     * **codecs**
       * [1-DocValuesProducer](lucene/class/codecs/1-DocValuesProducer.md)
       * [2-Lucene80DocValuesConsumerd](lucene/class/codecs/2-Lucene80DocValuesConsumerd.md)
-      * [2~1-NumericDocValues格式](lucene/class/codecs/2~1-NumericDocValues格式.md)
+      * [2~1-NUMERIC 格式](lucene/class/codecs/2~1-NUMERIC 格式.md)
       * [3-Lucene80DocValuesProducer](lucene/class/codecs/3-Lucene80DocValuesProducer.md)
     * **index**
       * [1-DocIdSet](lucene/class/index/1-DocIdSet.md)
