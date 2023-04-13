@@ -15,3 +15,8 @@
 
 
 ![dvm-sorted](dvm-sorted.svg)
+
+
+
+- numberOfBitsPerOrd ： 一个ord占用的bit位
+- ordStartOffset： 
