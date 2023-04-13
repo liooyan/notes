@@ -36,4 +36,4 @@ dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的
 - gcd ： 最大公约数
 - startOffset： FieldValues  开始时在 dvd文档的偏移量
 - pointer ： FieldValues   占用dvd文档大小
-- jumpOffset ：如果分
+- jumpOffset ：如果分块，分块索引的偏移量。没有分块为 -1
