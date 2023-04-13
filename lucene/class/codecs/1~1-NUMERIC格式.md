@@ -33,4 +33,7 @@ dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的
 - blockCount ： FieldValues 分块数量，如果不分块。则为-1
 - numBitsPerValue ： 数组的每个元素，使用几个bit位来存储
 - min： FieldValues  的最小值
-- 
+- gcd ： 最大公约数
+- startOffset： FieldValues  开始时在 dvd文档的偏移量
+- pointer ： FieldValues   占用dvd文档大小
+- jumpOffset ：如果分
