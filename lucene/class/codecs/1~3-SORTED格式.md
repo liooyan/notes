@@ -23,4 +23,7 @@
 - ordPointer： ord数组占用dvd大小
 - code： 压缩格式
 - blockShift： 分片方式
-- maxLength：values中zhan
+- maxLength：values中占用最大的长度
+- valueStartOffset： value数组在dvd开始位置
+- valuePointer： value占用dvd大小
+- addressStartOffset
