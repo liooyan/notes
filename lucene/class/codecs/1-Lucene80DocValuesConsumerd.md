@@ -129,11 +129,15 @@ dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的
 
 //TODO 后续查看
 
-# SORTED格式
+
+
+
+
+# 6 SORTED格式
 
 本文档在 Lucene80DocValuesConsumer 的文档基础上，描述关于SORTED字段类型的`FieldValues`  编码。
 
-# 2 FieldValues
+## 6.1 FieldValues
 
 SORTED 为短语格式的索引，它共分为3个数组进行存储
 
@@ -149,7 +153,7 @@ SORTED 为短语格式的索引，它共分为3个数组进行存储
 
 
 
-# 3 dvm- FieldValues  部分
+## 6.2 dvm- FieldValues  部分
 
 
 
@@ -170,3 +174,36 @@ SORTED 为短语格式的索引，它共分为3个数组进行存储
 
 
 
+# 7 SORTED_NUMERIC格式
+
+本文档在 Lucene80DocValuesConsumer 的文档基础上，描述关于ORTED_NUMERIC字段类型的`FieldValues`  编码。
+
+
+
+## 7.1 FieldValues
+
+ORTED_NUMERIC文档为存储多个数值属性索引，所以它有NUMERIC 格式的所有内容，同时在NUMERIC 格式基础上添加关于每个文档对应的数量。
+
+添加一个addresses 数组，addresses每个元素为当前文档id的值，在values数组的下标
+
+
+
+## 7.2 dvm- FieldValues  部分
+
+在NUMERIC  格式基础上添加关于address数组的描述
+
+- start ：address数组开始位置
+- BLOCK_SHIFT
+- pointer： address数组占用大小
+
+
+
+SORTED_SET格式
+
+本文档在 Lucene80DocValuesConsumer 的文档基础上，描述关于SORTED_SET字段类型的`FieldValues`  编码。
+
+
+
+
+
+与SORTED_NUMERIC格式 类似，只是SORTED_SET格式是在 SORTED格式格式上扩展
