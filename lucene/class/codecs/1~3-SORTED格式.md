@@ -26,4 +26,4 @@
 - maxLength：values中占用最大的长度
 - valueStartOffset： value数组在dvd开始位置
 - valuePointer： value占用dvd大小
-- addressStartOffset
+- addressStartOffset：address数组在
