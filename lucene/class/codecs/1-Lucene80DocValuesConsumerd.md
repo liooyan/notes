@@ -79,13 +79,13 @@ FieldValues   结构根据不同的数据类型，保存为不同的结构。其
 
 
 
-# 1 NUMERIC 格式
+# 4 NUMERIC 格式
 
 本文档在 Lucene80DocValuesConsumer 的文档基础上，描述关于NUMERIC 字段类型的`FieldValues`  编码。
 
 
 
-# 2 FieldValues
+## 4.1 FieldValues
 
 这里FieldValues 存储的就是一个数值数组，但为了尽可能的提高压缩率，需要确保保存的数据尽可能的小，这样才可以通过类似 `PackedInts` 的方式减少存储空间。所以采取以下方式：
 
@@ -101,9 +101,7 @@ FieldValues   结构根据不同的数据类型，保存为不同的结构。其
 
 
 
-
-
-# 3 dvm- FieldValues  部分
+## 4.2 dvm- FieldValues  部分
 
 dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的索引，具体如下：
 
@@ -118,3 +116,57 @@ dvm文档除了 DocsIDFileId  部分外，还有描述FieldValues相关字段的
 - startOffset： FieldValues  开始时在 dvd文档的偏移量
 - pointer ： FieldValues   占用dvd文档大小
 - jumpOffset ：如果分块，分块索引的偏移量。没有分块为 -1
+
+
+
+# 5  BINARY格式
+
+本文档在 Lucene80DocValuesConsumer 的文档基础上，描述关于BINARY字段类型的`FieldValues`  编码。
+
+
+
+
+
+//TODO 后续查看
+
+# SORTED格式
+
+本文档在 Lucene80DocValuesConsumer 的文档基础上，描述关于SORTED字段类型的`FieldValues`  编码。
+
+# 2 FieldValues
+
+SORTED 为短语格式的索引，它共分为3个数组进行存储
+
+- ord 数组：数量与文档id相同，用于存储每个文档对于的values编号
+- values数组：用于存储短语的值，每个元素都是先存储短语长度，后存储值
+- address 数组：用于存储每个values数组元素在dvd文件的位置
+
+
+
+所有在dvm的文件中，都是围绕这3个数组展开的。
+
+
+
+
+
+# 3 dvm- FieldValues  部分
+
+
+
+![dvm-sorted](dvm-sorted.svg)
+
+
+
+- numberOfBitsPerOrd ： 一个ord占用的bit位
+- ordStartOffset： ord数组在dvd文件开始位置
+- ordPointer： ord数组占用dvd大小
+- code： 压缩格式
+- blockShift： 分片方式
+- maxLength：values中占用最大的长度
+- valueStartOffset： value数组在dvd开始位置
+- valuePointer： value占用dvd大小
+- addressStartOffset：address数组在dvd 文件开始位置
+- addressPointer ： address数组在dvd占用大小
+
+
+
