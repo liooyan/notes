@@ -81,10 +81,6 @@ FieldValues   结构根据不同的数据类型，保存为不同的结构。其
 
 
 
-### 2.3.2 BinaryDocValuesWriter
-
-记录结果
-
 
 
 ### 2.3.3 SortedDocValuesWriter
