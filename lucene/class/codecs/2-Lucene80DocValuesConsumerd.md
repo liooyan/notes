@@ -73,9 +73,9 @@ dvm是对dvd文件的索引，每个字段都是如下结构。
 
 
 
-## 2.3 FieldValues  
+## 3 FieldValues  
 
-FieldValues   结构根据不同的数据类型，保存为不同的结构。其与 `DocValuesWriter`中不同子类一一对应。
+FieldValues   结构根据不同的数据类型，保存为不同的结构。其与 `DocValuesWriter`中不同子类一一对应。参考各自子文档
 
 
 
