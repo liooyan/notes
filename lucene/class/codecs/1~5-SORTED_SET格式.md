@@ -6,4 +6,4 @@
 
 
 
-与
+与SORTED_NUMERIC格式 类似，只是SORTED_SET格式是在 SORTED格式格式上扩展
