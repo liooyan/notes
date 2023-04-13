@@ -8,7 +8,7 @@
 
 #  FieldValues
 
-ORTED_NUMERIC文档为存储多个数组
+ORTED_NUMERIC文档为存储多个数值属性索引，所以它有NUMERIC 格式的所有内容，同时在NUMERIC 格式基础上添加关于每个文档对应的
 
 
 
