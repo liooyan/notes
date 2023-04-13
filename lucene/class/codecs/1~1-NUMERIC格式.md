@@ -6,7 +6,7 @@
 
 # 2 FieldValues
 
-这里FieldValues 存储的就是一个数值数组，但为了尽可能的ti
+这里FieldValues 存储的就是一个数值数组，但为了尽可能的提高压缩率，需要确保保存的数据尽可能的小，这样才可以通过类似 `PackedInts`
 
 
 
