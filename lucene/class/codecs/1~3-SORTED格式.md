@@ -4,7 +4,7 @@
 
 # 2 FieldValues
 
-
+SORTED 为短语格式的索引，ord
 
 
 
@@ -26,4 +26,5 @@
 - maxLength：values中占用最大的长度
 - valueStartOffset： value数组在dvd开始位置
 - valuePointer： value占用dvd大小
-- addressStartOffset：address数组在
+- addressStartOffset：address数组在dvd 文件开始位置
+- addressPointer ： address数组在dvd占用大小
