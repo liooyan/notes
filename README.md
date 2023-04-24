@@ -4,6 +4,7 @@
     * **codecs**
       * [1-Lucene80DocValuesConsumerd](lucene/class/codecs/1-Lucene80DocValuesConsumerd.md)
       * [2-Lucene80DocValuesProducer](lucene/class/codecs/2-Lucene80DocValuesProducer.md)
+      * [3-IndexedDISI](lucene/class/codecs/3-IndexedDISI.md)
     * **index**
       * [1-DocIdSet](lucene/class/index/1-DocIdSet.md)
       * [2-DocValuesWriter](lucene/class/index/2-DocValuesWriter.md)
