@@ -57,3 +57,11 @@ scorer 方法返回的对象，主要包括以下方法定义：
 
 
 
+# 4 TwoPhaseIterator
+
+提供 matches 与 matchCost 方法，由子类实现，具体不同的过滤条件，有不同的实现，
+
+但构造函数需要一个DocIdSetIterator ， 这样就可以与其他Iterator 共享同一个迭代其，方便多条件查询
+
+
+
