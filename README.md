@@ -10,6 +10,7 @@
       * [2-DocValuesWriter](lucene/class/index/2-DocValuesWriter.md)
     * **search**
       * [1-Query](lucene/class/search/1-Query.md)
+      * [2-SortedNumericDocValuesRangeQuery](lucene/class/search/2-SortedNumericDocValuesRangeQuery.md)
     * **util工具类**
       * [1-FixedBitSet](lucene/class/util工具类/1-FixedBitSet.md)
       * [2-PackedInts](lucene/class/util工具类/2-PackedInts.md)
