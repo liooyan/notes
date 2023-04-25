@@ -24,6 +24,42 @@ scorer 方法返回的对象，主要包括以下方法定义：
 
 
 
+## 2.1 ConstantScoreScorer
+
+Scorer 的具体实现
+
+```java
+  public ConstantScoreScorer(Weight weight, float score, ScoreMode scoreMode, TwoPhaseIterator twoPhaseIterator) {
+    super(weight);
+    this.score = score;
+    this.scoreMode = scoreMode;
+    if (scoreMode == ScoreMode.TOP_SCORES) {
+      this.approximation = new DocIdSetIteratorWrapper(twoPhaseIterator.approximation());
+      this.twoPhaseIterator = new TwoPhaseIterator(this.approximation) {
+        @Override
+        public boolean matches() throws IOException {
+          return twoPhaseIterator.matches();
+        }
+
+        @Override
+        public float matchCost() {
+          return twoPhaseIterator.matchCost();
+        }
+      };
+    } else {
+      this.approximation = twoPhaseIterator.approximation();
+      this.twoPhaseIterator = twoPhaseIterator;
+    }
+    this.disi = TwoPhaseIterator.asDocIdSetIterator(this.twoPhaseIterator);
+  }
+```
+
+构造函数中 TwoPhaseIterator 是通过参数传入的，而 iterator() 返回的是disi，是通过 TwoPhaseIterator 获取的
+
+
+
+
+
 
 
 # 3 matches
@@ -65,3 +101,30 @@ scorer 方法返回的对象，主要包括以下方法定义：
 
 
 
+
+
+## 4.1 TwoPhaseIterator.asDocIdSetIterator
+
+在 ConstantScoreScorer 中我们知道它的迭代器就是通过这个方法获取的。
+
+```java
+  public static DocIdSetIterator asDocIdSetIterator(TwoPhaseIterator twoPhaseIterator) {
+    return new TwoPhaseIteratorAsDocIdSetIterator(twoPhaseIterator);
+  }
+```
+
+也就是TwoPhaseIterator的子类TwoPhaseIteratorAsDocIdSetIterator，其主要方法为：
+
+```java
+    private int doNext(int doc) throws IOException {
+      for (;; doc = approximation.nextDoc()) {
+        if (doc == NO_MORE_DOCS) {
+          return NO_MORE_DOCS;
+        } else if (twoPhaseIterator.matches()) {
+          return doc;
+        }
+      }
+    }
+```
+
+这里我们看到迭代器的next 方法最后的matches 也使用的是 twoPhaseIterator 中的方法
