@@ -12,6 +12,11 @@
       * [1-Query](lucene/class/search/1-Query.md)
       * [2-Weight](lucene/class/search/2-Weight.md)
       * [3-SortedNumericDocValuesRangeQuery](lucene/class/search/3-SortedNumericDocValuesRangeQuery.md)
+      * [4-BooleanQuery](lucene/class/search/4-BooleanQuery.md)
+      * [6-Boolean2ScorerSupplier](lucene/class/search/6-Boolean2ScorerSupplier.md)
+      * [7-ConjunctionDISI](lucene/class/search/7-ConjunctionDISI.md)
+      * [8-DisjunctionScorer](lucene/class/search/8-DisjunctionScorer.md)
+      * [9-DisiPriorityQueue](lucene/class/search/9-DisiPriorityQueue.md)
     * **util工具类**
       * [1-FixedBitSet](lucene/class/util工具类/1-FixedBitSet.md)
       * [2-PackedInts](lucene/class/util工具类/2-PackedInts.md)
