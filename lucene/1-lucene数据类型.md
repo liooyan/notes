@@ -10,3 +10,6 @@
 | TextField             | string     | Y        | Y        | Y/N      |
 | NumericDocValuesField |            |          |          |          |
 
+
+
+
